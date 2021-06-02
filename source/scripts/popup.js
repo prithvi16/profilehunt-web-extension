@@ -15,7 +15,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // console.emoji('🦄', response);
 
-  document.getElementById('github__button').addEventListener('click', async (event) => {
+  document.getElementById('button').addEventListener('click', async (event) => {
+    document.getElementById('spinner').classList.remove("hidden");
+
     const tabs = await browser.tabs.query({
       active: true,
       currentWindow: true
@@ -24,7 +26,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     const url = tabs.length && tabs[0].url;
     const title = tabs.length && tabs[0].title;
     axios.post("http://0.0.0.0:3000/add-to-board", { url: url, title: title}).then((response)=>{
-      document.getElementById('github__button').textContent = "success";
+      document.getElementById('button').textContent = "Job added ✅";
+      document.getElementById('spinner').classList.add("hidden");
     })
   });
 });
