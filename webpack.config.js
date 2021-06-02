@@ -112,13 +112,22 @@ module.exports = {
             options: {
               postcssOptions: {
                 plugins: [
-                  [
-                    'autoprefixer',
-                    {
-                      // Options
-                    },
-                  ],
-                ],
+                  require('postcss-import'),
+                  require('tailwindcss')({
+                    purge: ['source/**/*.html'],
+                    mode: 'jit',
+
+                            darkMode: false, // or 'media' or 'class'
+                            theme: {
+                              extend: {},
+                            },
+                            variants: {
+                              extend: {},
+                            },
+                            plugins: [],
+                  }),
+                  require('autoprefixer'),
+                ]
               },
             },
           },
