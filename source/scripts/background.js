@@ -5,10 +5,10 @@ browser.runtime.onInstalled.addListener(() => {
   console.emoji('🦄', 'onInstalled....');
 });
 
-browser.runtime.onMessage.addListener((_request, _sender, _sendResponse) => {
-  // Do something with the message!
-  // alert(request.url);
+// browser.runtime.onMessage.addListener((_request, _sender, _sendResponse) => {
+//   // Do something with the message!
+//   // alert(request.url);
 
-  // And respond back to the sender.
-  return Promise.resolve('got your message, thanks!');
-});
+//   // And respond back to the sender.
+//   return Promise.resolve('got your message, thanks!');
+// });
