@@ -3,10 +3,10 @@
   "name": "Profilehunt job application tracker and organizer",
   "version": "0.0.1",
   "icons": {
-    "16": "assets/icons/favicon-16.png",
-    "32": "assets/icons/favicon-32.png",
-    "48": "assets/icons/favicon-48.png",
-    "128": "assets/icons/favicon-128.png"
+    "16": "assets/icons/favicon-16x16.png",
+    "32": "assets/icons/favicon-32x32.png",
+    "48": "assets/icons/apple-touch-icon-57x57.png",
+    "128": "assets/icons/apple-touch-icon-120x120.png"
   },
 
   "description": "Add jobs from any website to track them on a kanban board",
@@ -38,12 +38,12 @@
   "browser_action": {
     "default_popup": "popup.html",
     "default_icon": {
-      "16": "assets/icons/favicon-16.png",
-      "32": "assets/icons/favicon-32.png",
-      "48": "assets/icons/favicon-48.png",
-      "128": "assets/icons/favicon-128.png"
+      "16": "assets/icons/favicon-16x16.png",
+      "32": "assets/icons/favicon-32x32.png",
+      "48": "assets/icons/apple-touch-icon-57x57.png",
+      "128": "assets/icons/apple-touch-icon-120x120.png"
     },
-    "default_title": "Profilehunt",
+    "default_title": "Profilehunt job tracker",
     "__chrome|opera__chrome_style": false,
     "__firefox__browser_style": false
   },
