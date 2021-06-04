@@ -58,6 +58,7 @@ module.exports = {
     contentScript: './source/scripts/contentScript.js',
     popup: './source/scripts/popup.js',
     options: './source/scripts/options.js',
+    constants: './source/scripts/constants.js'
   },
 
   output: {
@@ -144,7 +145,7 @@ module.exports = {
     new WextManifestWebpackPlugin(),
     // Generate sourcemaps
     new webpack.SourceMapDevToolPlugin({filename: false}),
-    new webpack.EnvironmentPlugin(['NODE_ENV', 'TARGET_BROWSER']),
+    new webpack.EnvironmentPlugin(['NODE_ENV', 'TARGET_BROWSER', 'BASE_URL']),
     new CleanWebpackPlugin({
       cleanOnceBeforeBuildPatterns: [
         path.join(process.cwd(), `extension/${targetBrowser}`),

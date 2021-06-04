@@ -1,6 +1,7 @@
 import browser from 'webextension-polyfill';
 import axios from 'axios';
 import '../styles/popup.scss';
+var envConfig = require('./constants')
 
 function openWebPage(url) {
   return browser.tabs.create({url});
@@ -13,7 +14,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   //   url,
   // });
 
-  // console.emoji('🦄', response);
+   console.log(envConfig.BASE_URL);
 
   document.getElementById('button').addEventListener('click', async (event) => {
     document.getElementById('spinner').classList.remove("hidden");
@@ -25,7 +26,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   
     const url = tabs.length && tabs[0].url;
     const title = tabs.length && tabs[0].title;
-    axios.post("http://0.0.0.0:3000/add-to-board", { url: url, title: title}).then((response)=>{
+    axios.post(`${envConfig.BASE_URL}/add-to-board`, { url: url, title: title}).then((response)=>{
       document.getElementById('button').textContent = "Job added ✅";
       document.getElementById('spinner').classList.add("hidden");
     })
