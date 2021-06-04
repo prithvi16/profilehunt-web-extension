@@ -18,6 +18,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   //   msg: 'hello',
   //   url,
   // });
+  $('body').on('click', 'a', function(){
+    openWebPage( envConfig.BASE_URL + $(this).attr('href'));
+  });
 
   document.getElementById('button').addEventListener('click', async (event) => {
     document.getElementById('spinner').classList.remove("hidden");

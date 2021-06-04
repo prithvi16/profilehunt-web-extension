@@ -1,9 +1,9 @@
-import 'emoji-log';
-import browser from 'webextension-polyfill';
+// import 'emoji-log';
+// import browser from 'webextension-polyfill';
 
-browser.runtime.onInstalled.addListener(() => {
-  console.emoji('🦄', 'onInstalled....');
-});
+// browser.runtime.onInstalled.addListener(() => {
+//   console.emoji('🦄', 'onInstalled....');
+// });
 
 // browser.runtime.onMessage.addListener((_request, _sender, _sendResponse) => {
 //   // Do something with the message!

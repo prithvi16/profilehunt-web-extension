@@ -145,6 +145,10 @@ module.exports = {
     new WextManifestWebpackPlugin(),
     // Generate sourcemaps
     new webpack.SourceMapDevToolPlugin({filename: false}),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+    }),
     new webpack.EnvironmentPlugin(['NODE_ENV', 'TARGET_BROWSER', 'BASE_URL']),
     new CleanWebpackPlugin({
       cleanOnceBeforeBuildPatterns: [
