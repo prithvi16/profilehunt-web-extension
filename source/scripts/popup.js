@@ -18,7 +18,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   //   msg: 'hello',
   //   url,
   // });
-  $('body').on('click', 'a', function(){
+  $('body').on('click', 'a', function(event){
+    event.preventDefault();
     openWebPage( envConfig.BASE_URL + $(this).attr('href'));
   });
 
