@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "Profilehunt job application organizer",
+  "name": "Profilehunt job clipper",
   "version": "0.0.1",
   "icons": {
     "16": "assets/icons/favicon-16x16.png",
@@ -11,7 +11,7 @@
 
   "description": "Add jobs from any website to track them on a kanban board",
   "homepage_url": "https://profilehunt.net",
-  "short_name": "Profilehunt job tracker",
+  "short_name": "Profilehunt job clipper",
 
   "permissions": [
     "activeTab",
@@ -42,7 +42,7 @@
       "57": "assets/icons/apple-touch-icon-57x57.png",
       "120": "assets/icons/apple-touch-icon-120x120.png"
     },
-    "default_title": "Profilehunt job tracker",
+    "default_title": "Profilehunt job clipper",
     "__chrome|opera__chrome_style": false,
     "__firefox__browser_style": false
   }
